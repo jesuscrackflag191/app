@@ -157,7 +157,7 @@ client.on('message', msg => {
           });
 
           const searcher = new YTSearcher({
-            key: "AIzaSyAsPL-cvEy3yiuyNWSJ2mqOmogXv4XztIE",
+            key: youtube_api,
             revealed: true
         });
         
@@ -375,4 +375,4 @@ client.on('message', msg => {
       
 //Yo creo en ti, no importa lo que digan los demas, demuestrales que si vales y que puedes llegar a hacer mucho bien.
 
-client.login("NzY1NzI5MjA2NDM1OTcxMTAy.X4ZC5Q.OmyEvcVhkUebjgqeLNy41nnRBEc");
+client.login(process.env.token);
