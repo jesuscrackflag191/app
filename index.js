@@ -140,7 +140,6 @@ client.on('message', msg => {
               const embed = new Discord.MessageEmbed()
                 .setTitle("Rojo Help")
                 .setColor("BLUE")
-                .setThumbnail(message.guild.icon)
                 .setDescription(`
                 __**Elige**__
                 > \`Todos los Comandos Normales (r!help all)\`
@@ -157,7 +156,6 @@ client.on('message', msg => {
               const embed = new Discord.MessageEmbed()
                 .setTitle("Rojo Help")
                 .setColor("BLUE")
-                .setThumbnail(message.guild.icon)
                 .setDescription(`
                 __**Comandos (All)**__
                 > \`8ball (r!8ball)\`
