@@ -37,10 +37,6 @@ client.on('message', message =>{
  
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
-
-    } else if(command === 'help'){
-        client.commands.get('help').execute(message, args);
-
     } else if(command === 'say'){
         client.commands.get('say').execute(message, args);
 
@@ -140,21 +136,44 @@ client.on('message', msg => {
           client.on('message', message => {
   
             console.log(message.content)
-            if (message.content === 'r!help info') {
+            if (message.content === 'r!help') {
               const embed = new Discord.MessageEmbed()
                 .setTitle("Rojo Help")
                 .setColor("BLUE")
                 .setThumbnail(message.guild.icon)
                 .setDescription(`
-                __**Info list**__
-                > \`serverinfo\`
-                > \`avatar\`
-                > \`userinfo\` `)
-                .setFooter("PandaRetard", "https://media.giphy.com/media/7C5dOWxcNNbk6bVBNi/giphy.gif")
+                __**Elige**__
+                > \`Todos los Comandos Normales (r!help all)\`
+                > \`Comandos musica\`(r!help musica)`)
                 .setTimestamp();     
                 message.channel.send(embed);
             }
           });
+
+          client.on('message', message => {
+  
+            console.log(message.content)
+            if (message.content === 'r!help all') {
+              const embed = new Discord.MessageEmbed()
+                .setTitle("Rojo Help")
+                .setColor("BLUE")
+                .setThumbnail(message.guild.icon)
+                .setDescription(`
+                __**Comandos (All)**__
+                > \`8ball (r!8ball)\`
+                > \`Ascii (r!ascii)\`
+                > \`Avatar (r!avatar @nickname)\`
+                > \`Clear - Limpiar Chat (r!clear 0/100)\`
+                > \`Kick (r!kick @nickname)\`
+                > \`Ping - Ping del bot (r!help ping)\`
+                > \`Say - hablar (r!say tu mensaje)\`
+                > \`Server info (r!serverinfo)\`
+                > \`User info (r!userinfo)\``)
+                .setTimestamp();     
+                message.channel.send(embed);
+            }
+          });
+
 
           const searcher = new YTSearcher({
             key: process.env.youtube_api,
