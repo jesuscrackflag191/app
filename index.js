@@ -157,7 +157,7 @@ client.on('message', msg => {
           });
 
           const searcher = new YTSearcher({
-            key: youtube_api,
+            key: process.env.youtube_api,
             revealed: true
         });
         
