@@ -96,14 +96,6 @@ client.on('message', msg => {
         msg.channel.send('https://pbs.twimg.com/media/EVlHOdhXkAAI82i.jpg')
       }});
 
-
-      client.on('message', msg => {
-        if (msg.author == client.user){return}
-        if (msg.author.id == "159985870458322944"){return}
-        let message = msg.content.toLowerCase()
-        if(message.includes(".-.")) {
-          msg.channel.send(jesus)
-        }});
     
 
 
@@ -138,16 +130,47 @@ client.on('message', msg => {
             console.log(message.content)
             if (message.content === 'r!help') {
               const embed = new Discord.MessageEmbed()
-                .setTitle("Rojo Help")
-                .setColor("BLUE")
-                .setDescription(`
-                __**Elige**__
-                > \`Todos los Comandos Normales (r!help all)\`
-                > \`Comandos musica\`(r!help musica)`)
-                .setTimestamp();     
-                message.channel.send(embed);
+                .setTitle("Comandos de Rojo")
+                .setDescription("Tengo `4` categorías y `17` comandos.")
+                .setColor("RED")
+                .addField("» Categorías", message.guild.id )
+                .addFields(// Hacemos nuevas Fields
+                    {
+                        name: "Nombre: ",// Nombre - Titulo - Caso 1
+                        value: mentionedUser.username,
+                        inline: true // En linea: SI
+                    },
+                    {
+                        name: "#️⃣ Tag: ",// Nombre - Titulo - Caso 1
+                        value: `#${mentionedUser.tag}`,// Del "user" sacamos su tag / discriminador
+                        inline: true// En linea: SI
+                    },
+                    {
+                        name: "Estado: ",// Nombre - Titulo - Caso 1
+                        value: `${mentionedUser.presence.status}`,// Del "user" sacamos su tag / discriminador
+                        inline: true// En linea: SI
+                    },
+                    {
+                        name: "🆔 ID: ",// Nombre - Titulo - Caso 1
+                        value: mentionedUser.id,// Del "user" sacamos su ID
+                    },
+                    {
+                        name: 'Avatar link: ',// Nombre - Titulo - Caso 1
+                        value: `[Pinche Aquí](${mentionedUser.displayAvatarURL()})`// Del "user" obtenemos su Avatar Link, Hacemos que dentro del Array se encuentre el Link y cuando se de Click te reenviara una pagina viendo el avatar del "user"
+                    },
+                    {
+                      name: 'Dato de creacion: ',// Nombre - Titulo - Caso 1
+                      value: mentionedUser.createdAt
+                  },
+                  {
+                    name: 'Se unio al server el: ',// Nombre - Titulo - Caso 1
+                    value: mentionedMember.joinedAt
+                },
+                )
+                  message.channel.send(embed);
+        
             }
-          });
+        });
 
           client.on('message', message => {
   

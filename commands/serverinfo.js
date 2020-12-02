@@ -6,7 +6,6 @@ module.exports = {
     execute(message, args){
 const embed = new Discord.MessageEmbed()
 .setTitle(message.guild)
-.setThumbnail(message.guild)
 .addField("ID:", message.guild.id )
 .addField("Region:", message.guild.region)
 .addField("Servidor creado el:", message.guild.createdAt)
