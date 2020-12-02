@@ -148,7 +148,7 @@ client.on('message', msg => {
             value: "ㅤ",// Del "user" sacamos su ID
         })
         .setDescription(
-          `Use \`${prefix}help\` followed by a command name to get more additional information on a command or category. For example: \`${prefix}help fun \`.`
+          `Use \`r!help\` followed by a command name to get more additional information on a command or category. For example: \`${prefix}help fun \`.`
         )
         .setFooter(
           `Requested by ${message.author.tag}`,
