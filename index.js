@@ -137,34 +137,31 @@ client.on('message', msg => {
                 .addFields(// Hacemos nuevas Fields
                     {
                         name: "Nombre: ",// Nombre - Titulo - Caso 1
-                        value: mentionedUser.username,
-                        inline: true // En linea: SI
+                        value: "nada",
                     },
                     {
                         name: "#️⃣ Tag: ",// Nombre - Titulo - Caso 1
-                        value: `#${mentionedUser.tag}`,// Del "user" sacamos su tag / discriminador
-                        inline: true// En linea: SI
+                        value: `#nada`,// Del "user" sacamos su tag / discriminador
                     },
                     {
                         name: "Estado: ",// Nombre - Titulo - Caso 1
-                        value: `${mentionedUser.presence.status}`,// Del "user" sacamos su tag / discriminador
-                        inline: true// En linea: SI
+                        value: `nada`,// Del "user" sacamos su tag / discriminador
                     },
                     {
                         name: "🆔 ID: ",// Nombre - Titulo - Caso 1
-                        value: mentionedUser.id,// Del "user" sacamos su ID
+                        value: "nada",// Del "user" sacamos su ID
                     },
                     {
                         name: 'Avatar link: ',// Nombre - Titulo - Caso 1
-                        value: `[Pinche Aquí](${mentionedUser.displayAvatarURL()})`// Del "user" obtenemos su Avatar Link, Hacemos que dentro del Array se encuentre el Link y cuando se de Click te reenviara una pagina viendo el avatar del "user"
+                        value: `[Pinche Aquí]`// Del "user" obtenemos su Avatar Link, Hacemos que dentro del Array se encuentre el Link y cuando se de Click te reenviara una pagina viendo el avatar del "user"
                     },
                     {
                       name: 'Dato de creacion: ',// Nombre - Titulo - Caso 1
-                      value: mentionedUser.createdAt
+                      value: "mada"
                   },
                   {
                     name: 'Se unio al server el: ',// Nombre - Titulo - Caso 1
-                    value: mentionedMember.joinedAt
+                    value: "a"
                 },
                 )
                   message.channel.send(embed);
