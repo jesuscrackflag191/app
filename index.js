@@ -130,40 +130,32 @@ client.on('message', msg => {
             console.log(message.content)
             if (message.content === 'r!help') {
               const embed = new Discord.MessageEmbed()
-                .setTitle("Comandos de Rojo")
-                .setDescription("Tengo `4` categorías y `17` comandos.")
-                .setColor("RED")
-                .addField("» Categorías", message.guild.id )
-                .addFields(// Hacemos nuevas Fields
-                    {
-                        name: "Nombre: ",// Nombre - Titulo - Caso 1
-                        value: "nada",
-                    },
-                    {
-                        name: "#️⃣ Tag: ",// Nombre - Titulo - Caso 1
-                        value: `#nada`,// Del "user" sacamos su tag / discriminador
-                    },
-                    {
-                        name: "Estado: ",// Nombre - Titulo - Caso 1
-                        value: `nada`,// Del "user" sacamos su tag / discriminador
-                    },
-                    {
-                        name: "🆔 ID: ",// Nombre - Titulo - Caso 1
-                        value: "nada",// Del "user" sacamos su ID
-                    },
-                    {
-                        name: 'Avatar link: ',// Nombre - Titulo - Caso 1
-                        value: `[Pinche Aquí]`// Del "user" obtenemos su Avatar Link, Hacemos que dentro del Array se encuentre el Link y cuando se de Click te reenviara una pagina viendo el avatar del "user"
-                    },
-                    {
-                      name: 'Dato de creacion: ',// Nombre - Titulo - Caso 1
-                      value: "mada"
-                  },
-                  {
-                    name: 'Se unio al server el: ',// Nombre - Titulo - Caso 1
-                    value: "a"
-                },
-                )
+        .setTitle("📬 Need help? Here are all of my commands:")
+        .addFields({
+            name: "Fun",// Nombre - Titulo - Caso 1
+            value: "ㅤ",
+        },
+        {
+            name: "Moderacion",// Nombre - Titulo - Caso 1
+            value: `ㅤ`,// Del "user" sacamos su tag / discriminador
+        },
+        {
+            name: "Misc",// Nombre - Titulo - Caso 1
+            value: ㅤ,// Del "user" sacamos su tag / discriminador
+        },
+        {
+            name: "Musica",// Nombre - Titulo - Caso 1
+            value: "ㅤ",// Del "user" sacamos su ID
+        })
+        .setDescription(
+          `Use \`${prefix}help\` followed by a command name to get more additional information on a command or category. For example: \`${prefix}help fun \`.`
+        )
+        .setFooter(
+          `Requested by ${message.author.tag}`,
+          message.author.displayAvatarURL({ dynamic: true })
+        )
+        .setTimestamp()
+        .setColor("BLACK");
                   message.channel.send(embed);
         
             }
