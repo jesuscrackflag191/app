@@ -132,20 +132,20 @@ client.on('message', msg => {
               const embed = new Discord.MessageEmbed()
         .setTitle("📬 Need help? Here are all of my commands:")
         .addFields({
-            name: "Fun",// Nombre - Titulo - Caso 1
-            value: "ㅤ",
+            name: "Fun o Diversion",// Nombre - Titulo - Caso 1
+            value: "r!help fun",
         },
         {
             name: "Moderacion",// Nombre - Titulo - Caso 1
-            value: `ㅤ`,// Del "user" sacamos su tag / discriminador
+            value: `r!help moderacion`,// Del "user" sacamos su tag / discriminador
         },
         {
-            name: "Misc",// Nombre - Titulo - Caso 1
-            value: "ㅤ",// Del "user" sacamos su tag / discriminador
+            name: "Misceláneo",// Nombre - Titulo - Caso 1
+            value: "r!help misc" ,// Del "user" sacamos su tag / discriminador
         },
         {
             name: "Musica",// Nombre - Titulo - Caso 1
-            value: "ㅤ",// Del "user" sacamos su ID
+            value: "r!help musica",// Del "user" sacamos su ID
         })
         .setDescription(
           `Utilice \`r!Help\` seguido del nombre de un comando para obtener más información adicional sobre un comando o categoría. Por ejemplo: \`${prefix}help fun\`.`
