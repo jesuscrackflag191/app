@@ -148,10 +148,10 @@ client.on('message', msg => {
             value: "ㅤ",// Del "user" sacamos su ID
         })
         .setDescription(
-          `Use \`r!help\` followed by a command name to get more additional information on a command or category. For example: \`${prefix}help fun \`.`
+          `Utilice \`r!Help\` seguido del nombre de un comando para obtener más información adicional sobre un comando o categoría. Por ejemplo: \`${prefix}help fun\`.`
         )
         .setFooter(
-          `Requested by ${message.author.tag}`,
+          `Pedido por: ${message.author.tag}`,
           message.author.displayAvatarURL({ dynamic: true })
         )
         .setTimestamp()
