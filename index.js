@@ -141,7 +141,7 @@ client.on('message', msg => {
         },
         {
             name: "Misc",// Nombre - Titulo - Caso 1
-            value: ㅤ,// Del "user" sacamos su tag / discriminador
+            value: "ㅤ",// Del "user" sacamos su tag / discriminador
         },
         {
             name: "Musica",// Nombre - Titulo - Caso 1
