@@ -307,7 +307,7 @@ client.on('message', msg => {
                     serverQueue.txtChannel.send({
             embed: {
                 color: "BLUE",
-                description: `🎶  **|**  Reproduciendo Ahora: **\`${serverQueue.songs[0].title}\`**`
+                description: `🎶  **|**  Playing now: **\`${serverQueue.songs[0].title}\`**`
             }
         });
             }
