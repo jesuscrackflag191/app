@@ -23,7 +23,7 @@ client.on('ready', () => {
   console.log(`Inciado Como: ${client.user.tag}!`)
   client.user.setPresence( {
   
-    activity: {name: `r!help | Estoy en 2 servidores.`,
+    activity: {name: `r!help | Estoy en ${client.cache.size} servidores.`,
     type: "PLAYING"},
     status:"online"});})
     client.setMaxListeners (200)
@@ -130,22 +130,22 @@ client.on('message', msg => {
             console.log(message.content)
             if (message.content === 'r!help') {
               const embed = new Discord.MessageEmbed()
-        .setTitle("📬 Need help? Here are all of my commands:")
+        .setTitle("📬¿Necesitas ayuda? Aquí están todas mis categorias:")
         .addFields({
-            name: "Fun o Diversion",// Nombre - Titulo - Caso 1
+            name: "Fun o Diversion",
             value: "r!help fun",
         },
         {
-            name: "Moderacion",// Nombre - Titulo - Caso 1
-            value: `r!help moderacion`,// Del "user" sacamos su tag / discriminador
+            name: "Moderacion",
+            value: `r!help moderacion`,
         },
         {
-            name: "Misceláneo",// Nombre - Titulo - Caso 1
-            value: "r!help misc" ,// Del "user" sacamos su tag / discriminador
+            name: "Misceláneo",
+            value: "r!help misc" ,
         },
         {
-            name: "Musica",// Nombre - Titulo - Caso 1
-            value: "r!help musica",// Del "user" sacamos su ID
+            name: "Musica",
+            value: "r!help musica",
         })
         .setDescription(
           `Utilice \`r!Help\` seguido del nombre de un comando para obtener más información adicional sobre un comando o categoría. Por ejemplo: \`${prefix}help fun\`.`
