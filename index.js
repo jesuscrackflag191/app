@@ -390,9 +390,9 @@ client.on('message', msg => {
                 let qMsg =  `Reproduciendo ahora: ${nowPlaying.title}\n--------------------------\n`
         
                 for(var i = 1; i < serverQueue.songs.length; i++){
-                    qMsg += `${i}. ${serverQueue.songs[i].title}\n`
+                    qMsg += `${i}. ${serverQueue.songs[i].title}\n----------------------\n`
                 }
-        
+                
                 let sMsg = new Discord.MessageEmbed()
                 .addField(qMsg, `Pedido por: ${message.author.username}`)
                 .setColor("BLUE")
