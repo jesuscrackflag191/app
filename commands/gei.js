@@ -11,7 +11,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
             .setTitle(`${mentionedUser.username} Es un ${gei}% gei :rainbow_flag:`)
             .setColor('GRAY')
-            .setFooter(mentionedUser.displayName, mentionedUser.displayAvatarURL());
+            .setFooter(mentionedUser.username, mentionedUser.displayAvatarURL());
         message.channel.send(embed);
         }
         
