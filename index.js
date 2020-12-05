@@ -416,8 +416,10 @@ client.on('message', msg => {
         
                             message.channel.send("¡El bucle se ha desactivado!");
                         break;
-                    default:
-                        message.channel.send("Especifique qué bucle desea. my!loop <uno / todos / apagado>"); 
+                        case 'loop':
+                            message.channel.send("Especifique qué bucle desea. r!loop <one / all / off>");
+                        break;
+                         
                 }
             }
             function Queue(serverQueue){
