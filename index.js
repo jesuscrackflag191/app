@@ -132,7 +132,7 @@ client.on('message', msg => {
             console.log(message.content)
             if (message.content === 'r!help musica') {
               const embed = new Discord.MessageEmbed()
-        .setTitle("📭Ahora estas en la categoria ", "\`Musica\`", "Y sus comandos son:" )
+        .setTitle("📭Ahora estas en la categoria \`Musica\`Y sus comandos son:" )
         .addFields({
             name: "Play",
             value: "r!help play",
