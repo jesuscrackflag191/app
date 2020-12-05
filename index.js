@@ -101,7 +101,7 @@ client.on("message", async(message) => {
     if (message.content === 'r!meme') {
           
     const randomPuppy = require('random-puppy');
-    const subReddits = ["dankmemes", "meme", "memes"]
+    const subReddits = ["dylanteromemes", "dylanteromeme", "DYLANTEROMEME", "dylantero", "dankmemes", "memes😂", "fernan2posting", "memesdylantero", "memeschilenosctm", "memesenespañol", "memes", "chileanmemes", "memesgraciosos", "elgoth", "memeslol", "mclmi", "memeschilenos", "chilememes", "weasmemes", "gothmemes", "chileanposting", "elvallo", "moaigr", "buenardo", "m"]
     const random = subReddits[Math.floor(Math.random() * subReddits.length)]
 
     const img = await randomPuppy(random);
@@ -109,7 +109,7 @@ client.on("message", async(message) => {
     const memeEmbed = new Discord.MessageEmbed()
     .setColor("RANDOM")
     .setImage(img)
-    .setTitle(`Your meme. From r/${random}`)
+    .setTitle(`Toma tu meme <:quepasa:765687824539582526>`)
     .setURL(`https://reddit.com/r/${random}`)
 
     message.channel.send(memeEmbed);
