@@ -128,24 +128,24 @@ client.on('message', msg => {
           client.on('message', message => {
   
             console.log(message.content)
-            if (message.content === 'r!help') {
+            if (message.content === 'r!help musica') {
               const embed = new Discord.MessageEmbed()
         .setTitle("📬¿Necesitas ayuda? Aquí están todas mis categorias:")
         .addFields({
-            name: "Fun o Diversion",
-            value: "r!help fun",
+            name: "Play",
+            value: "r!help play",
         },
         {
-            name: "Moderacion",
-            value: `r!help moderacion`,
+            name: "Stop",
+            value: `r!help stop`,
         },
         {
-            name: "Misceláneo",
-            value: "r!help misc" ,
+            name: "Skip",
+            value: "r!help skip" ,
         },
         {
-            name: "Musica",
-            value: "r!help musica",
+            name: "Pause",
+            value: "r!help pause",
         })
         .setDescription(
           `Utilice \`r!Help\` seguido del nombre de un comando para obtener más información adicional sobre un comando o categoría. Por ejemplo: \`${prefix}help fun\`.`
@@ -160,6 +160,8 @@ client.on('message', msg => {
         
             }
         });
+
+
 
           client.on('message', message => {
   
@@ -207,6 +209,7 @@ client.on('message', msg => {
                     stop(message, serverQueue);
                     break;
                 case 'skip':
+                case 's':
                     skip(message, serverQueue);
                     break;     
                 case 'pause':
