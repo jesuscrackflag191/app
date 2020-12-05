@@ -4,7 +4,7 @@ const ytdl = require('ytdl-core');
 const { YTSearcher } = require('ytsearcher');
 const client = new Discord.Client();
 const queue = new Map();
-const db = require('mega-dtbs');
+const db = require('megadb');
 let prefix_db = new db.crearDB("prefixes");
 
 const fs = require('fs');
