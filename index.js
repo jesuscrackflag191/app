@@ -228,8 +228,12 @@ client.on('message', msg => {
         
 
 
-        client.on('message', async (message) => {
+        client.on("message", async(message) => {
             if (!message.content.startsWith(prefix)) return
+            
+            const serverQueue = queue.get(message.guild.id);
+        
+            const args = message.content.slice(prefix.length).trim().split(/ +/g)
             const command = args.shift().toLowerCase();
         
             switch(command){
@@ -255,7 +259,7 @@ client.on('message', msg => {
                     Queue(serverQueue);
                     break;
                 }
-        
+            
             async function execute(message, serverQueue){
                 let vc = message.member.voice.channel;
                 if(!vc){
