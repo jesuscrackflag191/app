@@ -5,7 +5,7 @@ const { YTSearcher } = require('ytsearcher');
 const client = new Discord.Client();
 const queue = new Map();
 jesus = ("Hola")
-const prefix = 'r!';
+const prefix = '-';
  
 const fs = require('fs');
  
