@@ -68,8 +68,8 @@ client.on('message', message =>{
     } else if(command === 'gei'){
         client.commands.get('gei').execute(message, args);
 
-    } else if(command === 'mute'){
-        client.commands.get('mute').execute(message, args);
+    } else if(command === 'hack'){
+        client.commands.get('hack').execute(message, args);
 
 
     } else if(command === 'clear'){
