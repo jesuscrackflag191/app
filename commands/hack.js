@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 
 
 module.exports = {
-    name: "ejemplo",
+    name: "hack",
     description: "Este es el ejemplo para no escribir",
     execute(message, args){
 
