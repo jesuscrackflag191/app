@@ -81,6 +81,7 @@ client.on('message', message =>{
 });
  
 client.on("message", async(message) => {
+    if (message.content === 'r!calculadora') {
     const embed = new Discord.MessageEmbed().setColor(`BLACK`);
 
     if (!args[0]) {
@@ -98,6 +99,7 @@ client.on("message", async(message) => {
         .setTitle('Calculadora')
         .addField('Salida', `\`\`\`js\n${resultado}\`\`\``, false);
     await message.channel.send(embed);
+    }
 });
 
 
