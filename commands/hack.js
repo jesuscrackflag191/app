@@ -94,9 +94,9 @@ module.exports = {
 							Num1 +
 							' \n<:candado:784874124844466196> | Su Contraseña:  ' +
 							Num +
-							' \n<:IP:784874124844466196> | Su IP:  ' +
+							' \n<:IP:784880937036546048> | Su IP:  ' +
 							Num3 +
-							' \n<:candado:784874124844466196> | Su Wi-fi: ' +
+							' \n<:wifi:784882072199495681> | Su Wi-fi: ' +
 							Num4 +
 							''
 					)

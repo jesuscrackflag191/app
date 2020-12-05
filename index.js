@@ -2,6 +2,7 @@ const { executionAsyncResource } = require('async_hooks');
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 const { YTSearcher } = require('ytsearcher');
+const math = require('math-expression-evaluator');
 const client = new Discord.Client();
 const queue = new Map();
 const db = require("megadb")
@@ -79,6 +80,25 @@ client.on('message', message =>{
     
 });
  
+client.on("message", async(message) => {
+    const embed = new Discord.MessageEmbed().setColor(`BLACK`);
+
+    if (!args[0]) {
+        embed.setFooter('Por favor ingrese una `expresion`.');
+        return await message.channel.send(embed);
+    }
+    let resultado;
+    try {
+        resultado = math.eval(args.join(' '));
+    } catch (e) {
+        resultado = 'error: Entrada Invalida';
+    }
+    embed
+        .addField('Entrada:', `\`\`\`js\n${args.join(' ')}\`\`\``, false)
+        .setTitle('Calculadora')
+        .addField('Salida', `\`\`\`js\n${resultado}\`\`\``, false);
+    await message.channel.send(embed);
+});
 
 
 client.on('message', msg => {
