@@ -209,7 +209,6 @@ client.on('message', msg => {
                     stop(message, serverQueue);
                     break;
                 case 'skip':
-                case 's':
                     skip(message, serverQueue);
                     break;     
                 case 'pause':
