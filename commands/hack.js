@@ -10,7 +10,7 @@ module.exports = {
         let usuarioh = message.mentions.users.first();
 		if (!usuarioh)
 			return message.channel.send(
-				'<:emoji_8~1:765687824539582526> | Menciona a alguien para hackear'
+				'<:quepasa:765687824539582526> | Menciona a alguien para hackear'
 			);
 
 		let contras = [
