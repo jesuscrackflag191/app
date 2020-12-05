@@ -232,27 +232,29 @@ client.on('message', msg => {
 
             const serverQueue = queue.get(message.guild.id);
         
-
+            const args = message.content.slice(prefix.length).trim().split(/ +/g)
+            const command = args.shift().toLowerCase();
+        
             switch(command){
-                case 'r!play': 
+                case 'play': 
                     execute(message, serverQueue);
                     break;
-                case 'r!stop':
+                case 'stop':
                     stop(message, serverQueue);
                     break;
-                case 'r!skip':
+                case 'skip':
                     skip(message, serverQueue);
                     break;     
-                case 'r!pause':
+                case 'pause':
                     pause(serverQueue);
                     break;
-                case 'r!resume':
+                case 'resume':
                     resume(serverQueue);
                     break;
-                case 'r!loop':
+                case 'loop':
                     Loop(args, serverQueue);
                     break;
-                case 'r!queue':
+                case 'queue':
                     Queue(serverQueue);
                     break;
                 }
