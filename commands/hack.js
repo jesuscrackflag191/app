@@ -90,7 +90,7 @@ module.exports = {
 				let embed = new Discord.MessageEmbed()
 					.setTitle('' + message.author.tag + ' hackeo a: ' + usuarioh + '')
 					.setDescription(
-						'<:gmail: 784869433855705089> | Su Gmail: ' +
+						'<:gmail:784869433855705089> | Su Gmail: ' +
 							Num1 +
 							' \n?? | Su Contraseña:  ' +
 							Num +
