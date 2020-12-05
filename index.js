@@ -224,18 +224,17 @@ client.on('message', msg => {
           const searcher = new YTSearcher({
             key: process.env.youtube_api,
             revealed: true
-        });
-        
+        });       
 
 
         client.on("message", async(message) => {
-            if (!message.content.startsWith(prefix)) return
-            
+
             const serverQueue = queue.get(message.guild.id);
         
             const args = message.content.slice(prefix.length).trim().split(/ +/g)
             const command = args.shift().toLowerCase();
-        
+            if (!message.content.startsWith(prefix)) return
+            
             switch(command){
                 case 'play': 
                     execute(message, serverQueue);
