@@ -82,6 +82,7 @@ client.on('message', message =>{
  
 client.on("message", async(message) => {
     if (message.content === 'r!calculadora') {
+    const math = require('math-expression-evaluator');
     const embed = new Discord.MessageEmbed().setColor(`BLACK`);
 
     if (!args[0]) {
