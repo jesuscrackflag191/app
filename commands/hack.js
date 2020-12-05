@@ -88,13 +88,13 @@ module.exports = {
 			}, 14000);
 			setTimeout(function() {
 				let embed = new Discord.MessageEmbed()
-					.setTitle(`${message.author.username}  hackeo a ${usuarioh.username}, quedaste <:ftecla:784878613304573953> ${usuarioh.username}`)
+					.setTitle(`${message.author.username}  hackeo a ${usuarioh.username}`)
 					.setDescription(
 						'<:gmail:784869277743972433> | Su Gmail: ' +
 							Num1 +
 							' \n<:candado:784874124844466196> | Su Contraseña:  ' +
 							Num +
-							' \n<:candado:784874124844466196> | Su IP:  ' +
+							' \n<:IP:784874124844466196> | Su IP:  ' +
 							Num3 +
 							' \n<:candado:784874124844466196> | Su Wi-fi: ' +
 							Num4 +
