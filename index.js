@@ -2,7 +2,6 @@ const { executionAsyncResource } = require('async_hooks');
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 const { YTSearcher } = require('ytsearcher');
-const math = require('math-expression-evaluator');
 const client = new Discord.Client();
 const queue = new Map();
 const db = require("megadb")
@@ -72,37 +71,29 @@ client.on('message', message =>{
     } else if(command === 'hack'){
         client.commands.get('hack').execute(message, args);
 
+    } else if(command === 'calc'){
+        client.commands.get('calc').execute(message, args);
+
+    } else if(command === 'awd'){
+        client.commands.get('awd').execute(message, args);
+
+    } else if(command === 'awd'){
+        client.commands.get('awd').execute(message, args);
+
+    } else if(command === 'awd'){
+        client.commands.get('awd').execute(message, args);
+
+    } else if(command === 'awd'){
+        client.commands.get('awd').execute(message, args);
 
     } else if(command === 'clear'){
         client.commands.get('clear').execute(message, args);
     }
     
     
+    
+    
 });
- 
-client.on("message", async(message) => {
-    if (message.content === 'r!calculadora') {
-    const math = require('math-expression-evaluator');
-    const embed = new Discord.MessageEmbed().setColor(`BLACK`);
-
-    if (!args[0]) {
-        embed.setFooter('Por favor ingrese una `expresion`.');
-        return await message.channel.send(embed);
-    }
-    let resultado;
-    try {
-        resultado = math.eval(args.join(' '));
-    } catch (e) {
-        resultado = 'error: Entrada Invalida';
-    }
-    embed
-        .addField('Entrada:', `\`\`\`js\n${args.join(' ')}\`\`\``, false)
-        .setTitle('Calculadora')
-        .addField('Salida', `\`\`\`js\n${resultado}\`\`\``, false);
-    await message.channel.send(embed);
-    }
-});
-
 
 client.on('message', msg => {
     if (msg.author == client.user){return}
