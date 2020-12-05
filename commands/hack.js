@@ -10,7 +10,7 @@ module.exports = {
         let usuarioh = message.mentions.users.first();
 		if (!usuarioh)
 			return message.channel.send(
-				'<:emoji_8~1:784864778384048168> | Menciona a alguien para hackear'
+				'<:emoji_8~1: 784864778384048168> | Menciona a alguien para hackear'
 			);
 
 		let contras = [
@@ -90,7 +90,7 @@ module.exports = {
 				let embed = new Discord.MessageEmbed()
 					.setTitle('' + message.author.tag + ' hackeo a: ' + usuarioh + '')
 					.setDescription(
-						'<:gmail:784869433855705089> | Su Gmail: ' +
+						'<:gmail: 784869433855705089> | Su Gmail: ' +
 							Num1 +
 							' \n?? | Su Contraseña:  ' +
 							Num +
