@@ -228,12 +228,8 @@ client.on('message', msg => {
         
 
 
-        client.on("message", async(message) => {
-
-            const serverQueue = queue.get(message.guild.id);
-        
-            const args = message.content.slice(prefix.length).trim().split(/ +/g)
-            const command = args.shift().toLowerCase();
+        client.on('message', async (message) => {
+            if (!message.content.startsWith(prefix)) return
         
             switch(command){
                 case 'play': 
