@@ -10,7 +10,7 @@ module.exports = {
         let usuarioh = message.mentions.users.first();
 		if (!usuarioh)
 			return message.channel.send(
-				'<:emoji_8~1: 784864778384048168> | Menciona a alguien para hackear'
+				'<:emoji_8~1:765687824539582526> | Menciona a alguien para hackear'
 			);
 
 		let contras = [
@@ -92,7 +92,7 @@ module.exports = {
 					.setDescription(
 						'<:gmail:784869277743972433> | Su Gmail: ' +
 							Num1 +
-							' \n?? | Su Contraseña:  ' +
+							' \n<:candado:784874124844466196> | Su Contraseña:  ' +
 							Num +
 							' \n?? | Su IP:  ' +
 							Num3 +
