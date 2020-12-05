@@ -95,6 +95,24 @@ client.on('message', message =>{
     
 });
 
+client.on("message", async(message) => {
+    console.log(message.content)
+    if (message.content === 'r!meme') {
+    const subReddits = ["dankmemes", "meme", "memes"]
+    const random = subReddits[Math.floor(Math.random() * subReddits.length)]
+
+    const img = await randomPuppy(random);
+
+    const memeEmbed = new Discord.MessageEmbed()
+    .setColor("RANDOM")
+    .setImage(img)
+    .setTitle(`Your meme. From r/${random}`)
+    .setURL(`https://reddit.com/r/${random}`)
+
+    message.channel.send(memeEmbed);
+    }
+});
+
 client.on('message', msg => {
     if (msg.author == client.user){return}
     if (msg.author.id == "159985870458322944"){return}
@@ -416,10 +434,8 @@ client.on('message', msg => {
         
                             message.channel.send("¡El bucle se ha desactivado!");
                         break;
-                        case 'loop':
-                            message.channel.send("Especifique qué bucle desea. r!loop <one / all / off>");
-                        break;
-                         
+                    default:
+                        message.channel.send("Especifique qué bucle desea. r!loop <uno / todos / apagado>"); 
                 }
             }
             function Queue(serverQueue){
