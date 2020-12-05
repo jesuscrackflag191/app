@@ -9,7 +9,7 @@ module.exports = {
         if (target) {
             let memberTarget = message.guild.members.cache.get(target.id);
         const embed = new Discord.MessageEmbed()
-            .setTitle(`<@${memberTarget.user.id}> Es un ${gei}% gei :rainbow_flag:`)
+            .setTitle(`<@!${memberTarget.user.id}> Es un ${gei}% gei :rainbow_flag:`)
             .setColor('GRAY')
             .setFooter(message.member.displayName, message.author.displayAvatarURL())
             .setTimestamp();
