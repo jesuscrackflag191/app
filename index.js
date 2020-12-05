@@ -1,3 +1,15 @@
+//nesecitas todos estos opus y npms
+//npm i opusscript
+//npm i opus
+//npm i @discordjs/opus
+//npm i node-opus
+//npm i async_hooks
+//npm i ytdl-core
+//npm i ytsearcher
+//Tambien nesecitas poner esto en las constantes
+//const prefix = 'p.';
+
+
 const { executionAsyncResource } = require('async_hooks');
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
