@@ -83,15 +83,14 @@ client.on("message", async(message) => {
     let prefix;
     if(prefix_db.tiene(`${message.guild.id}`)) {
         prefix = await prefix_db.obtener(`${message.guild.id}`)
-
     }else{
         prefix = "r!"
     }
 
-    if (!message.content.startsWith(prefix)) return
+    if (!message.content.startsWith(prefix)) return;
 
-    const args = message.content.slice(prefix.length).trim().split(/ +/g)
-    const command = args.shift().toLowerCase();
+    let args = message.content.slice(prefix.length).trim().split(/ +/g)
+    let command = args.shift().toLowerCase();
     
     if(command == "setprefix") {
     if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("No tienes permisos para hacer esto")
