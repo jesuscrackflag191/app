@@ -35,7 +35,7 @@ module.exports = {
 			'666.666.666',
 			'666'
 		];
-		let wifi = ['jotito23', 'feito24', 'tkllas1222', 'wifi3462'];
+		let wifi = ['poto23', 'tUmaMaEspta24', 'tkllas1222', 'Queteimporta122'];
 		var Num = contras[Math.floor(contras.length * Math.random())];
 		var Num1 = gmails[Math.floor(gmails.length * Math.random())];
 		var Num3 = ips[Math.floor(ips.length * Math.random())];
@@ -88,7 +88,7 @@ module.exports = {
 			}, 14000);
 			setTimeout(function() {
 				let embed = new Discord.MessageEmbed()
-					.setTitle('' + message.author.tag + ' hackeo a: ' + usuarioh + '')
+					.setTitle(`${message.author.username}  hackeo a: ${usuarioh.username}`)
 					.setDescription(
 						'<:gmail:784869277743972433> | Su Gmail: ' +
 							Num1 +
