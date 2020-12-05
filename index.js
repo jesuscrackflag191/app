@@ -1,6 +1,7 @@
 const { executionAsyncResource } = require('async_hooks');
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
+const randomPuppy = require('random-puppy');
 const { YTSearcher } = require('ytsearcher');
 const client = new Discord.Client();
 const queue = new Map();
@@ -53,8 +54,8 @@ client.on('message', message =>{
     } else if(command === 'serverinfo'){
         client.commands.get('serverinfo').execute(message, args);
 
-    } else if(command === 'meme'){
-        client.commands.get('meme').execute(message, args);
+    } else if(command === 'ada'){
+        client.commands.get('ada').execute(message, args);
 
     } else if(command === 'userinfo'){
         client.commands.get('userinfo').execute(message, args);
@@ -98,6 +99,8 @@ client.on('message', message =>{
 client.on("message", async(message) => {
     console.log(message.content)
     if (message.content === 'r!meme') {
+          
+    const randomPuppy = require('random-puppy');
     const subReddits = ["dankmemes", "meme", "memes"]
     const random = subReddits[Math.floor(Math.random() * subReddits.length)]
 
