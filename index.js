@@ -101,7 +101,7 @@ client.on("message", async(message) => {
     if (message.content === 'r!meme') {
           
     const randomPuppy = require('random-puppy');
-    const subReddits = ["MemesESP", "meme"]
+    const subReddits = ["MemesESP", "MemesEnEspanol"]
     const random = subReddits[Math.floor(Math.random() * subReddits.length)]
 
     const img = await randomPuppy(random);
