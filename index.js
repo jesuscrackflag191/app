@@ -230,6 +230,7 @@ client.on('message', msg => {
 
         client.on('message', async (message) => {
             if (!message.content.startsWith(prefix)) return
+            const command = args.shift().toLowerCase();
         
             switch(command){
                 case 'play': 
