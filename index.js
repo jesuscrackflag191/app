@@ -4,6 +4,7 @@ const ytdl = require('ytdl-core');
 const { YTSearcher } = require('ytsearcher');
 const client = new Discord.Client();
 const queue = new Map();
+const db = require("megadb")
 
 const prefix = 'r!';
 
@@ -131,7 +132,7 @@ client.on('message', msg => {
             console.log(message.content)
             if (message.content === 'r!help musica') {
               const embed = new Discord.MessageEmbed()
-        .setTitle("📬¿Necesitas ayuda? Aquí están todas mis categorias:")
+        .setTitle("📭Ahora estas en la categoria ", "\`Musica\`", "Y sus comandos son:" )
         .addFields({
             name: "Play",
             value: "r!help play",
