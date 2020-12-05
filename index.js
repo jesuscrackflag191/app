@@ -161,7 +161,41 @@ client.on('message', msg => {
             }
         });
 
-
+        client.on('message', message => {
+  
+            console.log(message.content)
+            if (message.content === 'r!help') {
+              const embed = new Discord.MessageEmbed()
+        .setTitle("📬¿Necesitas ayuda? Aquí están todas mis categorias:")
+        .addFields({
+            name: "Fun o Diversion",
+            value: "r!help fun",
+        },
+        {
+            name: "Moderacion",
+            value: `r!help moderacion`,
+        },
+        {
+            name: "Misceláneo",
+            value: "r!help misc" ,
+        },
+        {
+            name: "Musica",
+            value: "r!help musica",
+        })
+        .setDescription(
+          `Utilice \`r!Help\` seguido del nombre de un comando para obtener más información adicional sobre un comando o categoría. Por ejemplo: \`${prefix}help fun\`.`
+        )
+        .setFooter(
+          `Pedido por: ${message.author.tag}`,
+          message.author.displayAvatarURL({ dynamic: true })
+        )
+        .setTimestamp()
+        .setColor("BLACK");
+                  message.channel.send(embed);
+        
+            }
+        });
 
           client.on('message', message => {
   
