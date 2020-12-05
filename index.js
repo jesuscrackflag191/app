@@ -236,25 +236,25 @@ client.on('message', msg => {
             const command = args.shift().toLowerCase();
         
             switch(command){
-                case 'play': 
+                case 'r!play': 
                     execute(message, serverQueue);
                     break;
-                case 'stop':
+                case 'r!stop':
                     stop(message, serverQueue);
                     break;
-                case 'skip':
+                case 'r!skip':
                     skip(message, serverQueue);
                     break;     
-                case 'pause':
+                case 'r!pause':
                     pause(serverQueue);
                     break;
-                case 'resume':
+                case 'r!resume':
                     resume(serverQueue);
                     break;
-                case 'loop':
+                case 'r!loop':
                     Loop(args, serverQueue);
                     break;
-                case 'queue':
+                case 'r!queue':
                     Queue(serverQueue);
                     break;
                 }
