@@ -75,8 +75,8 @@ client.on('message', message =>{
     } else if(command === 'calc'){
         client.commands.get('calc').execute(message, args);
 
-    } else if(command === 'awd'){
-        client.commands.get('awd').execute(message, args);
+    } else if(command === 'mute'){
+        client.commands.get('mute').execute(message, args);
 
     } else if(command === 'awd'){
         client.commands.get('awd').execute(message, args);
