@@ -7,7 +7,8 @@ const client = new Discord.Client();
 const queue = new Map();
 const db = require("megadb")
 
-const prefix = 'r!';
+const prefix_db = new db.crearDB('prefixes');
+
 
 const fs = require('fs');
  
@@ -123,6 +124,37 @@ client.on('message', msg => {
     if(message.includes(".-.")) {
       msg.channel.send('**.-.**')
     }});
+
+
+    client.on('message', async message => {
+        if(message.author.bot) return;
+        if(message.channel.type === 'dm') return;
+    
+        let prefix;
+        if(prefix_db.tiene(`${message.guild.id}`)) {
+            prefix = await prefix_db.obtener(`${message.guild.id}`)
+        }else{
+            prefix = 'x-'
+        }
+    
+        if(!message.content.startsWith(prefix)) return;
+    
+        let args = message.content.slice(prefix.length).trim().split(/ +/g)
+        let command = args.shift().toLowerCase();
+    
+        if(command == 'test') {
+        return message.channel.send("Test aprovado");
+    }
+    
+        if(command == 'changeprefix') {
+          if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("No tienes permisos XD")
+          if(!args[0]) return message.channel.send("Nesecitas colocar un prefix :v")
+          prefix_db.establecer(`${message.guild.id}`, args[0])  
+          return message.channel.send("El prefix cambio a"+args[0])
+    
+       }
+    
+    })
 
   
     client.on('message', msg => {
