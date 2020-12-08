@@ -32,7 +32,14 @@ client.on('ready', () => {
     client.setMaxListeners (200)
     
  
-client.on('message', message =>{
+client.on("message", async(message) => {
+    let prefix;
+    if(prefix_db.tiene(`${message.guild.id}`)) {
+        prefix = await prefix_db.obtener(`${message.guild.id}`)
+    }else{
+        prefix = 'x-'
+    }
+
     if(!message.content.startsWith(prefix) || message.author.bot) return;
  
     const args = message.content.slice(prefix.length).split(/ +/);
